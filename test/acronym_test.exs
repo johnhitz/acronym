@@ -25,14 +25,14 @@ defmodule AcronymTest do
     assert Acronym.abbreviate("Complementary Metal-Oxide semiconductor") === "CMOS"
   end
 
-  @tag :pending
+  # @tag :pending
   test "it produces a very long abbreviation" do
     assert Acronym.abbreviate(
              "Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me"
            ) === "ROTFLSHTMDCOALM"
   end
 
-  @tag :pending
+  # @tag :pending
   test "it produces acronyms from phrases with consecutive delimiters" do
     assert Acronym.abbreviate("Something - I made up from thin air") === "SIMUFTA"
   end
