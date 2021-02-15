@@ -5,7 +5,7 @@ defmodule AcronymTest do
     assert Acronym.abbreviate("Portable Networks Graphic") === "PNG"
   end
 
-  @tag :pending
+  # @tag :pending
   test "it produces acronyms from lower case" do
     assert Acronym.abbreviate("Ruby on Rails") === "ROR"
   end
@@ -15,12 +15,12 @@ defmodule AcronymTest do
     assert Acronym.abbreviate("First in, First out") === "FIFO"
   end
 
-  @tag :pending
+  # @tag :pending
   test "it produces acronyms from phrases with acronyms" do
     assert Acronym.abbreviate("GNU Image Manipulation Program") === "GIMP"
   end
 
-  @tag :pending
+  # @tag :pending
   test "it produces acronyms ignoring punctuation and casing" do
     assert Acronym.abbreviate("Complementary Metal-Oxide semiconductor") === "CMOS"
   end
