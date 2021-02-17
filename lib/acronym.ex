@@ -7,9 +7,9 @@ defmodule Acronym do
   def abbreviate(string) do
     string
     |> String.split()
-    |> Enum.map(fn x -> Macro.underscore(x) end)
+    |> Enum.map(&Macro.underscore/1)
     |> Enum.map(fn x -> String.replace(x, ~r(_), " ") end)
-    |> Enum.map(fn x -> String.split(x) end)
+    |> Enum.map(&String.split/1)
     |> List.flatten()
     |> Enum.map(fn x -> String.split(x, "-", trim: true) end)
     |> List.flatten()
