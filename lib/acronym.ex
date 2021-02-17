@@ -8,7 +8,7 @@ defmodule Acronym do
     string
     |> String.split()
     |> Enum.map(&Macro.underscore/1)
-    |> Enum.map(fn x -> String.replace(x, ~r(_), " ") end)
+    |> Enum.map(&String.replace(&1, ~r(_), " "))
     |> Enum.map(&String.split/1)
     |> List.flatten()
     |> Enum.map(&String.split(&1, "-", trim: true))
